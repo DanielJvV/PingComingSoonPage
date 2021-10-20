@@ -1,0 +1,218 @@
+:root {
+    /*Primary Colours*/
+    --blue-prim: hsl(223, 87%, 63%);
+    /*Secondary Colours*/
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: (354, 100%, 66%);
+    /*Neutral Colours*/
+    --gray-gray: hsl(0, 0%, 59%);
+    --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/****************
+      Index
+1.) Typography 
+2.) Cards and box styles
+3.) Mobile Screen positioning
+4.) Desktop Screen positioning 
+5.) Challenge Code 
+*****************/
+
+
+/****************
+1.) Typography 
+*****************/
+
+body {
+    font-size: 20px;
+    font-family: "Libre Franklin", sans-serif;
+}
+
+h1 {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--gray-gray);
+    margin-bottom: 20px;
+}
+
+span {
+    font-weight: 700;
+    color: black;
+}
+
+p {
+    font-size: 0.8rem;
+    margin-bottom: 25px;
+}
+
+input::placeholder {
+    color: var(--pale-blue);
+}
+
+button {
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#errorMsg {
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+.red {
+    border: solid 1px red;
+}
+
+
+/****************
+2.) Cards and Border styles
+*****************/
+
+input {
+    width: 80%;
+    height: 2.5rem;
+    border-radius: 50px;
+    border: solid 1px var(--pale-blue);
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 80%;
+    height: 2.5rem;
+    border-radius: 50px;
+    border: solid 1px var(--blue-prim);
+    background-color: var(--blue-prim);
+    box-shadow: 2px 8px 14px 2px rgba(214, 245, 248, 0.75);
+    margin-bottom: 60px;
+}
+
+.dash {
+    width: 90%;
+}
+
+.social-logo {
+    width: 20px;
+    margin: 5px;
+}
+
+.icons {
+    border: solid 1px var(--pale-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    border-radius: 100%;
+}
+
+.icons:hover {
+    cursor: pointer;
+    background-color: var(--blue-prim);
+}
+
+.copyright {
+    color: var(--gray-gray);
+    font-size: 0.8rem;
+}
+
+.inputButton {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#errorMsg {
+    margin-top: 10px;
+}
+
+
+/****************
+3.) Mobile Screen positioning 
+*****************/
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 450px;
+    margin: auto;
+}
+
+.logo {
+    width: 50px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.socialmedia {
+    display: inline-flex;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+
+/****************
+4.) Desktop Screen positioning
+*****************/
+
+@media screen and (min-width: 768px) {
+    main {
+        max-width: 800px;
+    }
+    .inputButton {
+        display: flex;
+        flex-flow: row wrap;
+        margin-bottom: 20px;
+    }
+    button {
+        margin: auto;
+        width: 40%;
+        order: 2;
+    }
+    input {
+        margin: auto;
+        order: 1;
+        width: 59%;
+        margin-right: 5px;
+    }
+    #errorMsg {
+        order: 3;
+        width: 100%;
+        flex-basis: 100%;
+        margin-left: 30px;
+    }
+}
+
+
+/****************
+5.) Challenge Code      
+*****************/
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
